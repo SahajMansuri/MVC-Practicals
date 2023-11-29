@@ -20,7 +20,7 @@ namespace Practical_6.Controllers
         [HttpPost]
         public ActionResult login(string username, string password)
         {
-            if(username == "Sahaj" && password == "1234")
+            if(username == "Sahaj" && password == "1006")
             {
                 HttpCookie ck = new HttpCookie("user", "Sahaj");
                 Response.Cookies.Add(ck);

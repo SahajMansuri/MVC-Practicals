@@ -15,6 +15,7 @@
     @if (Session["user"] != null)
     {
         <h2>Hello , @Session["user"] from Session</h2>
+        @Html.ActionLink("Logout", "Logout", "Home");
     }
     else if (Request.Cookies["user"] != null)
     {
