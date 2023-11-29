@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title Practical-4</title>
+</head>
+<body>
+    <header>
+        <h2>@Html.ActionLink("Practical-4 layout", "Index", "Home")</h2>
+        <nav>
+            @Html.ActionLink("Home ", "Index", "Home") |
+            @Html.ActionLink("AboutUS", "AboutUS", "Home")
+        </nav>
+    </header>
+
+    @RenderBody()
+
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+</body>
+</html>
