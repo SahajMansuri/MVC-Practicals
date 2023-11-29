@@ -13,5 +13,12 @@ namespace Practical_5.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public string login()
+        {
+            string name = Request["username"];
+            return "Hello " + name;
+        }
     }
 }

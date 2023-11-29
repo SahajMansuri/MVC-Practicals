@@ -1,4 +1,4 @@
-﻿@using (Html.BeginForm())
+﻿@using (Html.BeginForm("login","Home", FormMethod.Post))
 {
     @Html.Label("Username :")
     @Html.TextBox("username")
