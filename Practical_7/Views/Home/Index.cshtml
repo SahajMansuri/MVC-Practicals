@@ -1,0 +1,36 @@
+﻿@model Practical_7.Models.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.Label("name :")
+        @Html.TextBox("name") <br /><br />
+
+        @Html.Label("Email :")
+        @Html.TextBox("email")<br /><br />
+
+        @Html.Label("age :")
+        @Html.TextBox("age")<br /><br />
+
+        @Html.Label("adderss :")
+        @Html.TextBox("adderss")<br />
+
+        @Html.ValidationSummary()
+        <br />
+
+        <input type="submit" value="Registration" />
+
+    }
+</body>
+</html>
