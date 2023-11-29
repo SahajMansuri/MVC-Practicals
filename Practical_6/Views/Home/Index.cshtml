@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    @if (Session["user"] != null)
+    {
+        <h2>Hello , @Session["user"] from Session</h2>
+    }
+    else if (Request.Cookies["user"] != null)
+    {
+        <h2>Hello, @Request.Cookies["user"].Value from Cookies</h2>
+    }
+    else
+    {
+        @Html.ActionLink("Must Login", "login", "Home");
+    }
+
+</body>
+</html>
