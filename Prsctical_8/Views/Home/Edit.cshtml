@@ -1,0 +1,33 @@
+﻿@model Prsctical_8.Models.Student
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Student</h4>
+    <hr />
+
+    @Html.HiddenFor(model => model.Id) <br />
+
+    Name : @Html.EditorFor(model => model.Name) <br /><br />
+
+
+    Sex : @Html.EditorFor(model => model.Sex) <br /><br />
+
+
+    Age : @Html.EditorFor(model => model.Age) <br />
+
+    <br />
+
+    <input type="submit" value="Save" class="btn btn-default" />
+
+</div>
+}
+
+@Html.ActionLink("Back to List", "Index")
